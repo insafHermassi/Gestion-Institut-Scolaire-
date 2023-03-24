@@ -46,8 +46,6 @@ public class StudentServiceImpl implements StudentService{
         Student old = getStudent(id);
         old.setFirstname(student.getFirstname());
         old.setLastname(student.getLastname());
-        old.setEmail(student.getEmail());
-        old.setPassword(student.getPassword());
         return studentRepository.save(old);
     }
 
@@ -69,5 +67,15 @@ public class StudentServiceImpl implements StudentService{
     @Override
     public List<Student> searchByEmail(String email) {
         return studentRepository.findByEmail(email);
+    }
+
+    @Override
+    public List<Student> searchByNationality(String nationality) {
+        return studentRepository.findByNationality(nationality);
+    }
+
+    @Override
+    public List<Student> searchByGender(String gender) {
+        return studentRepository.findByGender(gender);
     }
 }
