@@ -15,15 +15,12 @@ import java.io.Serializable;
         @GeneratedValue(strategy = GenerationType.AUTO)
         private long id;
 
-        @NotBlank(message = "firstname is mandatory")
-        @Pattern(regexp = "[a-zA-Z]+", message = "firstname name should be contains only alphabetic")
-        @Column(name = "first_name", length = 60, nullable = false)
-        private String firstname;
+        @NotBlank(message = "username is mandatory")
+        @Pattern(regexp = "[a-zA-Z]+", message = "username name should be contains only alphabetic")
+        @Column(name = "username", length = 60, nullable = false)
+        private String username;
 
-        @NotBlank(message = "lastname is mandatory")
-        @Pattern(regexp = "[a-zA-Z]+", message = "lastname should be contains only alphabetic")
-        @Column(name = "last_name", length = 60, nullable = false)
-        private String lastname;
+
 
         @Column(name = "email", nullable = false )
         @Email(message = "email invalid")

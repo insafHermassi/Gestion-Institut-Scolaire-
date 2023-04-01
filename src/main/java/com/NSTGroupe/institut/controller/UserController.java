@@ -16,7 +16,7 @@ public class UserController extends BasicController{
     @Autowired
     UserService userService;
 
-    @GetMapping(value = "welcome")
+    @GetMapping(value = "/welcome")
     public String welcome () {
         return ("Welcome, I'am a robot. I will help you to manage Users. ");
     }
@@ -51,20 +51,12 @@ public class UserController extends BasicController{
         return userService.updateUser(id, user);
     }
 
-    @GetMapping(value = "/searchByUser_Firstname")
-    public List<User> getByFirstname(@RequestParam("User_firstname") String firstname){
-        return userService.searchByFirstname(firstname);
+    @GetMapping(value = "/searchByUsername")
+    public List<User> getByUsername(@RequestParam("username") String username){
+        return userService.searchByUsername(username);
     }
 
-    @GetMapping(value = "/searchByUser_Lastname")
-    public List<User> getByLastname(@RequestParam("User_lastname") String lastname){
-        return userService.searchByLastname(lastname);
-    }
 
-    @GetMapping(value = "/searchByUser_Firstname_Or_Lastname")
-    public List<User> getByFirstnameOrLastname(@RequestParam("User_name") String firstname, String lastname){
-        return userService.searchByFirstnameOrLastname(firstname, lastname);
-    }
 
     @GetMapping(value = "/searchByEmail")
     public List<User> getByEmail(@RequestParam("User_email") String email){
