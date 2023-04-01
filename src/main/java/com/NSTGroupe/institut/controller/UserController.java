@@ -16,7 +16,7 @@ public class UserController extends BasicController{
     @Autowired
     UserService userService;
 
-    @GetMapping(value = "welcome")
+    @GetMapping(value = "/welcome")
     public String welcome () {
         return ("Welcome, I'am a robot. I will help you to manage Users. ");
     }
