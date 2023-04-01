@@ -46,9 +46,6 @@ public class Professor implements Serializable {
    private  String establishment;
    private String speciality;
     @JsonIgnore
-    //@ManyToOne
-    ////@JoinColumn(name = "modulesId", referencedColumnName = "id")
-   // private Module module;
     @ManyToMany(mappedBy = "professor", fetch = FetchType.LAZY)
     private List<Module> modules ;
 

@@ -22,9 +22,7 @@ public class Module  implements Serializable {
     private int coefficient;
     private  int nb_semester;
     private int credit;
-    //@JsonIgnore
-   // @OneToMany(mappedBy = "module",fetch = FetchType.LAZY,cascade = {CascadeType.REMOVE,CascadeType.PERSIST})
-    //private List<Professor> professor;
+   @JsonIgnore
     @ManyToMany(fetch = FetchType.LAZY)
     List<Professor> professors;
 

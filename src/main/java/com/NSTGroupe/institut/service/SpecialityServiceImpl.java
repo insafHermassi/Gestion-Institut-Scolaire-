@@ -29,6 +29,7 @@ public class SpecialityServiceImpl implements SpecialityService{
 
     @Override
     public List<Speciality> getAllSpeciality() {
+
         return (List<Speciality>) specialityRepository.findAll();
     }
 
