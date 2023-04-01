@@ -45,8 +45,15 @@ public class Professor implements Serializable {
     private  String grade;
    private  String establishment;
    private String speciality;
+    @JsonIgnore
+    //@ManyToOne
+    ////@JoinColumn(name = "modulesId", referencedColumnName = "id")
+   // private Module module;
+    @ManyToMany(mappedBy = "professor", fetch = FetchType.LAZY)
+    private List<Module> modules ;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "professors",fetch = FetchType.LAZY,cascade = {CascadeType.REMOVE,CascadeType.PERSIST})
-    private List<Module> modules;
+    @ManyToOne
+    @JoinColumn(name = "sectorId", referencedColumnName = "id")
+    private Professor professor;
 }

@@ -29,6 +29,7 @@ public class ModuleServiceImpl implements ModuleService {
 
     @Override
     public List<Module> getAllModules() {
+
         return (List<Module>) moduleRepository.findAll();
     }
 
