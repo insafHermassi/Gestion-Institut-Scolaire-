@@ -46,27 +46,17 @@ public class UserServiceImpl implements UserService {
     @Override
     public User updateUser(long id, User user) throws ResourceNotFound {
         User old = getUser(id);
-        old.setFirstname(user.getFirstname());
-        old.setLastname(user.getLastname());
+        old.setUsername(user.getUsername());
         old.setEmail(user.getEmail());
         old.setPassword(user.getPassword());
         return userRepository.save(old);
     }
 
     @Override
-    public List<User> searchByFirstname(String firstname) {
-        return userRepository.findByFirstname(firstname);
+    public List<User> searchByUsername(String username) {
+        return userRepository.findByUsername(username);
     }
 
-    @Override
-    public List<User> searchByLastname(String lastname) {
-        return userRepository.findByLastname(lastname);
-    }
-
-    @Override
-    public List<User> searchByFirstnameOrLastname(String firstname, String lastname) {
-        return userRepository.findByFirstnameOrLastname(firstname, lastname);
-    }
 
     @Override
     public List<User> searchByEmail(String email) {

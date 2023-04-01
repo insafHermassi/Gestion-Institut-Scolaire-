@@ -15,9 +15,8 @@ public interface UserService {
 
     public Map<String, Boolean> deleteUser (long id);
     public User updateUser (long id, User user) throws ResourceNotFound;
-    public List<User> searchByFirstname (String firstname);
-    public List<User> searchByLastname (String lastname);
-    public List<User> searchByFirstnameOrLastname (String firstname, String lastname);
+    public List<User> searchByUsername (String username);
+
     public List<User> searchByEmail (String email);
 
 
