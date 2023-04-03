@@ -18,7 +18,7 @@ public interface StudentService{
     public List<Student> searchByFirstname (String firstname);
     public List<Student> searchByLastname (String lastname);
     public List<Student> searchByFirstnameOrLastname (String firstname, String lastname);
-    //public List<Student> searchByEmail (String email);
+    public List<Student> searchByEmail (String email);
     public List<Student> searchByNationality(String nationality);
 
     public List<Student> searchByGender(String gender);

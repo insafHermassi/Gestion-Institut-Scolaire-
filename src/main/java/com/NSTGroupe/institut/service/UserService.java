@@ -6,6 +6,7 @@ import com.NSTGroupe.institut.exception.ResourceNotFound;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 public interface UserService {
 
@@ -15,9 +16,8 @@ public interface UserService {
 
     public Map<String, Boolean> deleteUser (long id);
     public User updateUser (long id, User user) throws ResourceNotFound;
-    public List<User> searchByFirstname (String firstname);
-    public List<User> searchByLastname (String lastname);
-    public List<User> searchByFirstnameOrLastname (String firstname, String lastname);
+    public Optional<User> searchByUsername (String username);
+
     public List<User> searchByEmail (String email);
 
 

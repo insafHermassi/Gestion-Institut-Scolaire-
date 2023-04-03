@@ -62,10 +62,10 @@ public class StudentController  extends  BasicController {
         return studentService.searchByFirstnameOrLastname(firstname, lastname);
     }
 
-  /*  @GetMapping(value = "/searchByEmail")
+    @GetMapping(value = "/searchByEmail")
     public List<Student> getByEmail(@RequestParam("User_email") String email) {
         return studentService.searchByEmail(email);
-    }*/
+    }
 
     @GetMapping(value = "/searchByStudent_Gender")
     public List<Student> getByGender(@RequestParam("Student_gender") String gender) {

@@ -14,7 +14,7 @@ import java.util.Date;
 @ToString
 @Data
 @Table(name = "students")
-public class Student  {
+public class Student  extends User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id_student;

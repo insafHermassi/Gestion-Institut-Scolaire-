@@ -51,19 +51,9 @@ public class UserController extends BasicController{
         return userService.updateUser(id, user);
     }
 
-    @GetMapping(value = "/searchByUser_Firstname")
-    public List<User> getByFirstname(@RequestParam("User_firstname") String firstname){
-        return userService.searchByFirstname(firstname);
-    }
-
-    @GetMapping(value = "searchByUser_Lastname")
-    public List<User> getByLastname(@RequestParam("User_lastname") String lastname){
-        return userService.searchByLastname(lastname);
-    }
-
-    @GetMapping(value = "searchByUser_Firstname_Or_Lastname")
-    public List<User> getByFirstnameOrLastname(@RequestParam("User_name") String firstname, String lastname){
-        return userService.searchByFirstnameOrLastname(firstname, lastname);
+    @GetMapping(value = "/searchByUsername")
+    public List<User> getByUsername(@RequestParam("username") String username){
+        return userService.searchByUsername(username);
     }
 
     @GetMapping(value = "searchByEmail")
