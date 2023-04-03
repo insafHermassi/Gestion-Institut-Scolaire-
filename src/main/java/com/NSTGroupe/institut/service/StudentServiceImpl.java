@@ -64,10 +64,9 @@ public class StudentServiceImpl implements StudentService{
         return studentRepository.findByFirstnameOrLastname(firstname, lastname);
     }
 
-   // @Override
-   // public List<Student> searchByEmail(String email) {
-     //   return studentRepository.findByEmail(email);
-   // }
+    @Override
+   public List<Student> searchByEmail(String email) {return studentRepository.findByEmail(email);
+    }
 
     @Override
     public List<Student> searchByNationality(String nationality) {

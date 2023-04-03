@@ -14,7 +14,7 @@ import java.util.List;
 @Table(name ="modules")
 public class Module  implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private  String name_module;
 
@@ -22,7 +22,12 @@ public class Module  implements Serializable {
     private int coefficient;
     private  int nb_semester;
     private int credit;
+   @JsonIgnore
+    @ManyToMany(fetch = FetchType.LAZY)
+    List<Professor> professors;
+
     @JsonIgnore
-    @OneToMany(mappedBy = "module",fetch = FetchType.LAZY,cascade = {CascadeType.REMOVE,CascadeType.PERSIST})
-    private List<Professor> professor;
+    @ManyToOne
+    @JoinColumn(name = "levelId", referencedColumnName = "id")
+    private Level level;
 }

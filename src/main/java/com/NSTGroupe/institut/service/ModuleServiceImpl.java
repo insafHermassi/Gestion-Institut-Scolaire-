@@ -29,7 +29,8 @@ public class ModuleServiceImpl implements ModuleService {
 
     @Override
     public List<Module> getAllModules() {
-        return (List<Module>) moduleRepository.findAll();
+
+        return  moduleRepository.findAll();
     }
 
     @Override
@@ -42,7 +43,7 @@ public class ModuleServiceImpl implements ModuleService {
 
     @Override
     public Module updateModule(long id, Module module) throws ResourceNotFound {
-      Module old=getModule(id);
+      Module old = getModule(id);
       old.setName_module(module.getName_module());
       old.setCoefficient(module.getCoefficient());
       old.setNb_semester(module.getNb_semester());

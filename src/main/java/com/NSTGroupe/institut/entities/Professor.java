@@ -20,7 +20,7 @@ import java.util.List;
 public class Professor implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @NotBlank(message = "firstname is mandatory")
@@ -47,6 +47,11 @@ public class Professor implements Serializable {
    private String speciality;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "professors",fetch = FetchType.LAZY,cascade = {CascadeType.REMOVE,CascadeType.PERSIST})
-    private List<Module> modules;
+    @ManyToMany(mappedBy = "professors", fetch = FetchType.LAZY)
+    private List<Module> modules ;
+
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "sectorId", referencedColumnName = "id")
+    private Professor professor;
 }

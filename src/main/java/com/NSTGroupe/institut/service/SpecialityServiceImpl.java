@@ -29,6 +29,7 @@ public class SpecialityServiceImpl implements SpecialityService{
 
     @Override
     public List<Speciality> getAllSpeciality() {
+
         return (List<Speciality>) specialityRepository.findAll();
     }
 
@@ -44,7 +45,7 @@ public class SpecialityServiceImpl implements SpecialityService{
     public Speciality updateSpeciality(long id, Speciality speciality) throws ResourceNotFound {
       Speciality old=getSpeciality(id);
       old.setName_speciality(speciality.getName_speciality());
-      old.setLibellle(speciality.getLibellle());
+      old.setLibelle(speciality.getLibelle());
       return specialityRepository.save(old);
     }
 

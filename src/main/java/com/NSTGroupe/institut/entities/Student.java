@@ -13,8 +13,8 @@ import java.util.Date;
 @Entity
 @ToString
 @Data
-
-public class Student  {
+@Table(name = "students")
+public class Student  extends User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id_student;

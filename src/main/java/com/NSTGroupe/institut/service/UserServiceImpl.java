@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -53,10 +54,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> searchByUsername(String username) {
+    public Optional<User> searchByUsername(String username) {
         return userRepository.findByUsername(username);
     }
-
 
     @Override
     public List<User> searchByEmail(String email) {
