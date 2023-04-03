@@ -13,7 +13,7 @@ import java.util.Date;
 @Entity
 @ToString
 @Data
-
+@Table(name = "students")
 public class Student  {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

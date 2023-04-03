@@ -16,7 +16,7 @@ public class UserController extends BasicController{
     @Autowired
     UserService userService;
 
-    @GetMapping(value = "/welcome")
+    @GetMapping(value = "welcome")
     public String welcome () {
         return ("Welcome, I'am a robot. I will help you to manage Users. ");
     }
@@ -26,17 +26,17 @@ public class UserController extends BasicController{
         return userService.save(user);
     }
 
-    @GetMapping("/AllUsers")
+    @GetMapping("AllUsers")
     public List<User> getUsers(){
         return  userService.getAllUsers();
     }
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "{id}")
     public User getUser(@PathVariable("id") long id)throws ResourceNotFound {
         return userService.getUser(id);
     }
 
-    @GetMapping(value = "/get")
+    @GetMapping(value = "get")
     public User getUserByParam(@RequestParam("id") long id) throws ResourceNotFound {
         return userService.getUser(id);
     }
@@ -56,17 +56,17 @@ public class UserController extends BasicController{
         return userService.searchByFirstname(firstname);
     }
 
-    @GetMapping(value = "/searchByUser_Lastname")
+    @GetMapping(value = "searchByUser_Lastname")
     public List<User> getByLastname(@RequestParam("User_lastname") String lastname){
         return userService.searchByLastname(lastname);
     }
 
-    @GetMapping(value = "/searchByUser_Firstname_Or_Lastname")
+    @GetMapping(value = "searchByUser_Firstname_Or_Lastname")
     public List<User> getByFirstnameOrLastname(@RequestParam("User_name") String firstname, String lastname){
         return userService.searchByFirstnameOrLastname(firstname, lastname);
     }
 
-    @GetMapping(value = "/searchByEmail")
+    @GetMapping(value = "searchByEmail")
     public List<User> getByEmail(@RequestParam("User_email") String email){
         return userService.searchByEmail(email);
     }

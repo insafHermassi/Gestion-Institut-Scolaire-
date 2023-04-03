@@ -22,7 +22,7 @@ public class StudentController  extends  BasicController {
         return studentService.save(student);
     }
 
-    @GetMapping("/AllStudents")
+    @GetMapping("/{AllStudents}")
     public List<Student> getStudents() {
         return studentService.getAllStudents();
     }
