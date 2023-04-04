@@ -24,9 +24,6 @@ import java.util.Set;
         @Column(name = "username", length = 60, nullable = false)
         private String username;
 
-        @Column(name = "email", nullable = false )
-        @Email(message = "email invalid")
-        private String email;
 
         @NotBlank
         @Size(max = 120)
@@ -44,7 +41,6 @@ import java.util.Set;
 
         public User(String username, String email, String password) {
             this.username = username;
-            this.email = email;
             this.password = password;
         }
 
@@ -64,13 +60,6 @@ import java.util.Set;
             this.username = username;
         }
 
-        public String getEmail() {
-            return email;
-        }
-
-        public void setEmail(String email) {
-            this.email = email;
-        }
 
         public String getPassword() {
             return password;

@@ -18,7 +18,6 @@ public interface UserService {
     public User updateUser (long id, User user) throws ResourceNotFound;
     public Optional<User> searchByUsername (String username);
 
-    public List<User> searchByEmail (String email);
 
 
 }

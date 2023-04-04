@@ -43,12 +43,10 @@ public class UserServiceImpl implements UserService {
         res.put("deleted_user", Boolean.TRUE);
         return res;
     }
-
     @Override
     public User updateUser(long id, User user) throws ResourceNotFound {
         User old = getUser(id);
         old.setUsername(user.getUsername());
-        old.setEmail(user.getEmail());
         old.setPassword(user.getPassword());
         return userRepository.save(old);
     }
@@ -58,9 +56,6 @@ public class UserServiceImpl implements UserService {
         return userRepository.findByUsername(username);
     }
 
-    @Override
-    public List<User> searchByEmail(String email) {
-        return userRepository.findByEmail(email);
-    }
+
 
 }
