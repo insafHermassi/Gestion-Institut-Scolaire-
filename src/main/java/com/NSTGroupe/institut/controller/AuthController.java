@@ -1,4 +1,4 @@
-package com.NST.springjwt.controllers;
+package com.NSTGroupe.institut.controller;
 
 import java.util.HashSet;
 import java.util.List;
@@ -7,6 +7,8 @@ import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
+import com.NSTGroupe.institut.Config.security.jwt.JwtUtils;
+import com.NSTGroupe.institut.Config.security.services.UserDetailsImpl;
 import com.NSTGroupe.institut.entities.ERole;
 import com.NSTGroupe.institut.entities.Role;
 import com.NSTGroupe.institut.entities.User;
@@ -16,8 +18,6 @@ import com.NSTGroupe.institut.payload.response.JwtResponse;
 import com.NSTGroupe.institut.payload.response.MessageResponse;
 import com.NSTGroupe.institut.repository.RoleRepository;
 import com.NSTGroupe.institut.repository.UserRepository;
-import com.NSTGroupe.institut.security.jwt.JwtUtils;
-import com.NSTGroupe.institut.security.services.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -108,7 +108,7 @@ public class AuthController {
 
             break;
           case "mod":
-            Role modRole = roleRepository.findByName(ERole.ROLE_MODERATOR)
+            Role modRole = roleRepository.findByName(ERole.ROLE_STUDENT)
                     .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
             roles.add(modRole);
 

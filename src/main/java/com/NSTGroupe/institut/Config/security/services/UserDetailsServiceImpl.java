@@ -1,5 +1,4 @@
-package com.NSTGroupe.institut.security.services;
-
+package com.NSTGroupe.institut.Config.security.services;
 import com.NSTGroupe.institut.entities.User;
 import com.NSTGroupe.institut.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
   @Transactional
   public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
     User user = userRepository.findByUsername(username)
-            .orElseThrow(() -> new UsernameNotFoundException("User Not Found with username: " + username));
+        .orElseThrow(() -> new UsernameNotFoundException("User Not Found with username: " + username));
 
     return UserDetailsImpl.build(user);
   }

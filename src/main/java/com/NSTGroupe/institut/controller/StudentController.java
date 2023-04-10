@@ -1,4 +1,4 @@
-package com.NSTGroupe.institut.controller;
+/*package com.NSTGroupe.institut.controller;
 
 import com.NSTGroupe.institut.entities.Student;
 import com.NSTGroupe.institut.exception.ResourceNotFound;
@@ -35,9 +35,9 @@ public class StudentController  extends  BasicController {
     @GetMapping(value = "/get")
     public Student getStudentByParam(@RequestParam("id") long id_student) throws ResourceNotFound {
         return studentService.getStudent(id_student);
-    }
+    }*/
 
-    @DeleteMapping
+   /* @DeleteMapping
     public Map<String, Boolean> deleteStudent(@RequestParam("id_student") long id_student) {
         return studentService.deleteStudent(id_student);
     }
@@ -78,3 +78,4 @@ public class StudentController  extends  BasicController {
 
     }
 }
+*/
