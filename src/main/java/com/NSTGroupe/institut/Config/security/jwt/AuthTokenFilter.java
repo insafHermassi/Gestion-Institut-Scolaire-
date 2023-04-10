@@ -1,6 +1,5 @@
 package com.NSTGroupe.institut.Config.security.jwt;
-
-import com.NST.springjwt.security.services.UserDetailsServiceImpl;
+import com.NSTGroupe.institut.Config.security.services.UserDetailsServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

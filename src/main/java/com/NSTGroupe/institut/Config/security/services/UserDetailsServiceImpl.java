@@ -1,7 +1,6 @@
 package com.NSTGroupe.institut.Config.security.services;
-
-import com.NST.springjwt.models.User;
-import com.NST.springjwt.repository.UserRepository;
+import com.NSTGroupe.institut.entities.User;
+import com.NSTGroupe.institut.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

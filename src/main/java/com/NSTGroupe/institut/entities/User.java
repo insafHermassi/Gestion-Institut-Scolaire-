@@ -76,6 +76,10 @@ import java.util.Set;
         public void setRoles(Set<Role> roles) {
             this.roles = roles;
         }
+
+        public String getEmail() {
+            return null;
+        }
     }
 
 

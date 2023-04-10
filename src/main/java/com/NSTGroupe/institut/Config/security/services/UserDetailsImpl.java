@@ -1,6 +1,6 @@
 package com.NSTGroupe.institut.Config.security.services;
 
-import com.NST.springjwt.models.User;
+import com.NSTGroupe.institut.entities.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -41,7 +41,7 @@ public class UserDetailsImpl implements UserDetails {
 
     return new UserDetailsImpl(
         user.getId(), 
-        user.getUsername(), 
+        user.getUsername(),
         user.getEmail(),
         user.getPassword(), 
         authorities);

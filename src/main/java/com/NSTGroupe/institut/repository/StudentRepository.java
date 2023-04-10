@@ -1,4 +1,4 @@
-package com.NSTGroupe.institut.repository;
+/*package com.NSTGroupe.institut.repository;
 
 import com.NSTGroupe.institut.entities.Student;
 import com.NSTGroupe.institut.entities.User;
@@ -22,3 +22,5 @@ public interface StudentRepository extends JpaRepository<Student,Long> {
 
     public List<Student> findByGender(String gender);
 }
+
+ */

@@ -1,4 +1,4 @@
-package com.NSTGroupe.institut.entities;
+/*package com.NSTGroupe.institut.entities;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
@@ -43,7 +43,7 @@ public class Student  extends Person {
     /*private Set<Retard> retards = new HashSet<Retard>(0);
     private Set<Bulletin> bulletin = new HashSet<Bulletin>(0);
     private Set<Observation> observations = new HashSet<Observation>(0);*/
-    private Set<Absence> absences = new HashSet<Absence>(0);
+   /* private Set<Absence> absences = new HashSet<Absence>(0);
     private Set<Note> notes=new HashSet<Note>(0);
 
     @Column(name = "Matricule", length = 45)
@@ -99,7 +99,7 @@ public class Student  extends Person {
 //	}
 
 
-    @JsonIgnore
+  /*  @JsonIgnore
     @ManyToMany()
     @JoinTable(name = "respo_eleve", joinColumns = @JoinColumn(name = "eleve", referencedColumnName = "idPersonne"), inverseJoinColumns = @JoinColumn(name = "respo", referencedColumnName = "idPersonne"))
     public Set<Responsable> getResponsables() {
@@ -138,7 +138,7 @@ public class Student  extends Person {
     public void setObservations(Set<Observation> observations) {
         this.observations = observations;
     }*/
-    @JsonIgnore
+  /*  @JsonIgnore
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "eleve")
     public Set<Absence> getAbsences() {
         return this.absences;
@@ -155,4 +155,4 @@ public class Student  extends Person {
 
 
 }
-
+*/
