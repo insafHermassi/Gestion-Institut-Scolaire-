@@ -1,7 +1,6 @@
 package com.NSTGroupe.institut.service;
 
 import com.NSTGroupe.institut.entities.Level;
-import com.NSTGroupe.institut.entities.Module;
 import com.NSTGroupe.institut.exception.ResourceNotFound;
 
 import java.util.List;

@@ -15,15 +15,15 @@ import java.util.List;
         public class Level implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long idLevel;
     private String libelle;
     private String option;
 
-   @JsonIgnore
+  /** @JsonIgnore
     @OneToMany(mappedBy = "level",fetch = FetchType.LAZY,cascade = {CascadeType.REMOVE,CascadeType.PERSIST})
     private List<Module> modules;
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "specialityId", referencedColumnName = "id")
-    private Speciality speciality;
+    private Speciality speciality;*/
 }
